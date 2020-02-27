@@ -3,7 +3,7 @@
     /// <summary>
     /// Defines possible change-tracked object states
     /// </summary>
-    internal enum ChangeTrackableObjectState
+    public enum ChangeTrackableObjectState
     {
         /// <summary>
         /// Trackable object is being built

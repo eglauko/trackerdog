@@ -9,7 +9,7 @@ using System.Reflection;
 namespace TrackerDog
 {
     [DebuggerDisplay("{Property.DeclaringType}.{Property.Name} = {CurrentValue} (Has changed? {HasChanged})")]
-    internal sealed class DeclaredObjectPropertyChangeTracking : IDeclaredObjectPropertyChangeTracking
+    public sealed class DeclaredObjectPropertyChangeTracking : IDeclaredObjectPropertyChangeTracking
     {
         private object _oldValue;
         private object _currentValue;

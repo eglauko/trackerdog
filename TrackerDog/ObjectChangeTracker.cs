@@ -17,7 +17,7 @@ namespace TrackerDog
     /// Represents an in-memory object property change tracker.
     /// </summary>
     [DebuggerDisplay("Changed properties: {ChangedProperties.Count}")]
-    internal class ObjectChangeTracker : IObjectChangeUnitOfWork, IObjectChangeTracker, IEnumerable<IObjectPropertyChangeTracking>
+    public class ObjectChangeTracker : IObjectChangeUnitOfWork, IObjectChangeTracker, IEnumerable<IObjectPropertyChangeTracking>
     {
         private readonly Guid _id = Guid.NewGuid();
         private const BindingFlags DefaultBindingFlags = BindingFlags.Public | BindingFlags.Instance;
@@ -64,7 +64,7 @@ namespace TrackerDog
         /// Gets a dictionary of tracked property states, where the keys are instances of <see cref="System.Reflection.PropertyInfo"/> and
         /// the values are <see cref="DeclaredObjectPropertyChangeTracking"/>.
         /// </summary>
-        internal Dictionary<PropertyInfo, DeclaredObjectPropertyChangeTracking> PropertyTrackings { get; }
+        public Dictionary<PropertyInfo, DeclaredObjectPropertyChangeTracking> PropertyTrackings { get; }
             = new Dictionary<PropertyInfo, DeclaredObjectPropertyChangeTracking>();
 
         internal Dictionary<string, ObjectPropertyChangeTracking> DynamicPropertyTrackings { get; }

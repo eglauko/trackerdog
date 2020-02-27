@@ -4,7 +4,7 @@ using TrackerDog.Configuration;
 
 namespace TrackerDog
 {
-    internal sealed class ObjectChangeTrackingContext
+    public sealed class ObjectChangeTrackingContext
     {
         /// <summary>
         /// Gets or sets tracked object state

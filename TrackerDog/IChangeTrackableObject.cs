@@ -5,7 +5,7 @@ namespace TrackerDog
     /// <summary>
     /// Defines an object that allows its changes to be tracked.
     /// </summary>
-    internal interface IChangeTrackableObject : INotifyPropertyChanged
+    public interface IChangeTrackableObject : INotifyPropertyChanged
     {
         ObjectChangeTrackingContext GetChangeTrackingContext();
         /// <summary>
